@@ -1,5 +1,4 @@
 class Receipt
-
   def initialize
     @list = Array.new
     @price_total = 0
