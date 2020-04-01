@@ -1,7 +1,10 @@
 class Receipt
 
   def initialize
-  	@list = []
+  	@list = Array.new
+  	@price_total = 0
+  	@tax_total = 0
+  	@grand_total = 0
   end
 
   def add_to_receipt(item)
@@ -14,11 +17,10 @@ class Receipt
 
   def print_list
     @list.each do |product|
-    	puts '#{product.item_name}, #{product.price}'
+    	puts "#{product.item_name}, #{product.price}"
     end
-    puts 'Subtotal: #{@price_total}'
-    puts 'Tax Total: #{@tax_total}'
-    puts 'Grand Total: #{@grand_total}'
+    puts "Subtotal: #{@price_total}"
+    puts "Tax Total: #{@tax_total}"
+    puts "Grand Total: #{@grand_total}"
   end
-
 end
