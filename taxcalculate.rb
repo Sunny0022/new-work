@@ -1,10 +1,9 @@
-require_relative ('C:\Training\print_receipt.rb')
-
+require_relative "print_receipt.rb"
 class Product
 	attr_accessor :item_name, :price, :exempt, :imported, :tax
   def initialize(item_name, price, exempt, imported)
 	@item_name = item_name
-	@price = price.to_f
+	@price = price.to_i
 	@exempt = exempt
 	@imported = imported
 	@tax = 0
@@ -20,11 +19,23 @@ class Product
     end
   end
 end
-prod1 = Product.new('Chocolates', 120.00, true, true)
-prod2 = Product.new('Potato Chips', 100.00, true, false)
-prod3 = Product.new('Perfume', 150.00, false, true)
+prod1 = Product.new('Chocolates', 120, true, true)
+prod2 = Product.new('Potato Chips', 100, true, false)
+prod3 = Product.new('Perfume', 150, false, true)
 new_receipt = Receipt.new
 new_receipt.add_to_receipt(prod1)
 new_receipt.add_to_receipt(prod2)
 new_receipt.add_to_receipt(prod3)
 puts new_receipt.print_list
+
+=begin
+puts 'Name of the product: ' 
+@item_name = gets.chomp
+puts 'Imported?: ' 
+@imported = gets.chomp
+puts 'Exempted from sales tax? ' 
+@exempt = gets.chomp
+puts 'Price: ' 
+@price = gets.chomp
+puts 'Do you want to add more items to your list(y/n):'	
+=end
