@@ -6,10 +6,10 @@ class Product
   attr_accessor :item_name, :price, :exempt, :imported, :tax
 
   def initialize(item_name, price, exempt, imported)
-	  @item_name = item_name
-	  @price = price.to_i
-	  @exempt = exempt
-	  @imported = imported
+    @item_name = item_name
+    @price = price.to_i
+    @exempt = exempt
+    @imported = imported
     @tax = 0
   end
 
