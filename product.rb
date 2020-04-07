@@ -2,6 +2,7 @@ require_relative "receipt.rb"
 
 IMPORT_SALES_CONSTANT = 0.15
 SALES_TAX_CONSTANT = 0.1
+
 class Product
   attr_accessor :item_name, :price, :exempt, :imported, :tax
 
